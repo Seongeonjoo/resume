@@ -1,0 +1,49 @@
+.hidden {
+  @include screenOut;
+}
+
+.flexAlignCen {
+  @include flexAlignCen;
+  
+  > div + div{
+    margin-left: 8px;
+  }
+
+  .txt {
+    .red {
+      color: $tomato;
+    }
+
+    & + .btn,
+    & + .select__group {
+      margin-left: 8px;
+    }
+  }
+
+  &.--select-col3 {
+    > .select__group {
+      max-width: 33.33%;
+    }
+  }
+
+  &.--justCen {
+    justify-content: center;
+  }
+
+  .btn__default {
+    min-width: auto;
+    padding: 0 12px;
+
+    .txt {
+      font-size: 14px;
+    }
+
+    &.--minW60 {
+      min-width: 60px;
+    }
+  }
+}
+
+.mt10 {
+  margin-top: 10px !important;
+}

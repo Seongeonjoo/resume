@@ -1,0 +1,38 @@
+@mixin notosans($weight, $file) {
+  @font-face {
+    font-family: "Noto Sans Korean";
+    font-weight: $weight;
+    font-style: normal;
+    src: url("../../fonts/NotoSans-#{$file}.eot?") format("eot"),
+      url("../../fonts/NotoSans-#{$file}.otf") format("opentype"),
+      url("../../fonts/NotoSans-#{$file}.woff") format("woff"),
+      url("../../fonts/NotoSans-#{$file}.woff2") format("woff2");
+  }
+}
+@mixin roboto($weight, $file) {
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: $weight;
+    src: url("../../fonts/Roboto-#{$file}.woff") format("woff");
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+  }
+}
+
+// Notosans
+@include notosans(100, "Thin");
+@include notosans(200, "Light");
+@include notosans(300, "DemiLight");
+// @include notosans(400, "Regular");
+@include notosans(400, "DemiLight");
+@include notosans(500, "Medium");
+@include notosans(700, "Bold");
+@include notosans(900, "Black");
+
+// Roboto
+@include roboto(100, "Thin");
+@include roboto(200, "Light");
+@include roboto(400, "Regular");
+@include roboto(500, "Medium");
+@include roboto(700, "Bold");
+@include roboto(900, "Black");

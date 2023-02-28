@@ -1,8 +1,11 @@
 import React from "react";
+import Profile from "./profile/myProfile";
 
 function Header() {
     return (
-        <div>안녕</div>
+        <div className="header">
+            <Profile/>
+        </div>
     );
 }
 

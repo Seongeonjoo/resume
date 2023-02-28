@@ -1,0 +1,88 @@
+// font
+@mixin fontStyle($size: 16, $weight: 400, $color: $black, $lineH: 1.6, $spac: -0.06em, $style: normal) {
+  font-size: #{$size}px;
+  font-weight: $weight;
+  font-style: $style;
+  color: $color;
+  line-height: $lineH;
+  letter-spacing: $spac;
+}
+
+// flex
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexAlignCen {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexAlignEnd {
+  display: flex;
+  align-items: flex-end
+}
+
+@mixin flexJustCen {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexJustStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin flexJustEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flexJustBet {
+  display: flex;
+  justify-content: space-between;
+}
+
+// border
+@mixin borderStyle($direct, $size: 1px, $style: solid, $color: $line-grey) {
+  @if $direct =="multi" {
+    border: $size $style $color;
+  }
+
+  @else {
+    border-#{$direct}: $size $style $color;
+  }
+}
+
+// size
+@mixin sizeWH($width: 100%, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin screenOut {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+@mixin positionFull {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// @mixin backgroundStyle($url, $repeat: no-repeat, $position: center, $size: contain) {
+//   background: url(#{$img-path}+$url) no-repeat $position / $size;
+// }
+
+// @mixin backgroundImg($url) {
+//   background-image: url(#{$img-path}+$url);
+// }
